@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>New Post</title>
+{% endblock%}
+
+{% block body %}
+<div class="container-fluid">
+    <main class="tm-main">
+        <h2>Viết Blog mới:</h2>
+        <form action="/post" method="POST">
+            <label for="title">Tiêu đề:</label>
+            <input class="form-control" type="text" name="title" id="title" placeholder="Nhập tiêu đề" aria-label="Nhập tiêu đề">
+            <br>
+            <label for="content">Tác giả:</label>
+            <input class="form-control" type="text" name="author" id="author" placeholder="Nhập tác giả"
+                aria-label="Nhập tác giả">
+            <br>
+            <label for="post">Nội dung:</label>
+            <textarea class="form-control" id="post" name="post" placeholder="Nhập nội dung" aria-label=" Nhập nội dung"
+                rows="3"></textarea>
+            <br>
+            <input class="btn btn-success" type="submit" value="Đăng">
+        </form>
+        <hr>
+    </main>
+</div>
+{% endblock%}
